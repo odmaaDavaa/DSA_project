@@ -15,6 +15,7 @@ public class ca_app {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        GUI mygui = new GUI();
     }
     
 }
