@@ -28,17 +28,107 @@ public class FishGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        titleFlbl = new javax.swing.JLabel();
+        speciesLBL = new javax.swing.JLabel();
+        populationLBL = new javax.swing.JLabel();
+        speciesTF = new javax.swing.JTextField();
+        populationTF = new javax.swing.JTextField();
+        addBTN = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        firsBTN = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        displayTA = new javax.swing.JTextArea();
+        backBTN = new javax.swing.JButton();
+        reportBTN = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        titleFlbl.setText("Fish");
+
+        speciesLBL.setText("Species:");
+
+        populationLBL.setText("Population:");
+
+        addBTN.setText("ADD");
+
+        jButton1.setText("Number of Fish");
+
+        firsBTN.setText("First Q:");
+
+        displayTA.setColumns(20);
+        displayTA.setRows(5);
+        jScrollPane1.setViewportView(displayTA);
+
+        backBTN.setText("Back");
+
+        reportBTN.setText("Report");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(titleFlbl))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(speciesLBL)
+                                    .addComponent(populationLBL))
+                                .addGap(76, 76, 76)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(speciesTF, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                                    .addComponent(populationTF)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(addBTN)
+                                .addGap(30, 30, 30)
+                                .addComponent(jButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(firsBTN))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addComponent(backBTN))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(reportBTN)))))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(titleFlbl)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(speciesLBL)
+                    .addComponent(speciesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(populationLBL)
+                    .addComponent(populationTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(addBTN)
+                            .addComponent(jButton1)
+                            .addComponent(firsBTN))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(reportBTN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backBTN)
+                        .addGap(28, 28, 28))))
         );
 
         pack();
@@ -70,5 +160,17 @@ public class FishGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addBTN;
+    private javax.swing.JButton backBTN;
+    private javax.swing.JTextArea displayTA;
+    private javax.swing.JButton firsBTN;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel populationLBL;
+    private javax.swing.JTextField populationTF;
+    private javax.swing.JButton reportBTN;
+    private javax.swing.JLabel speciesLBL;
+    private javax.swing.JTextField speciesTF;
+    private javax.swing.JLabel titleFlbl;
     // End of variables declaration//GEN-END:variables
 }
