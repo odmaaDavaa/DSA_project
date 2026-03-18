@@ -11,7 +11,7 @@ package dsa_ca;
  * @author apple
  */
 public class MyQueue implements QueueInterface{
-    
+    SLList mylist = new SLList();
     
     @Override
     public boolean isEmpty(){
@@ -24,12 +24,12 @@ public class MyQueue implements QueueInterface{
     
     @Override
     public int size(){
-        return theQueue.size();
+        return mylist.size();
     }
     
     @Override
     public void enqueue(Object e){
-        theQueue.add(0, (String)e);
+        mylist.add(mylist.size(), (String)e);
     }
     
     @Override
@@ -37,7 +37,7 @@ public class MyQueue implements QueueInterface{
        if(size() == 0){
            return null;
        }else{
-           return theQueue.remove(0);
+           return mylist.remove(1);
        }
     }
      @Override
@@ -45,18 +45,18 @@ public class MyQueue implements QueueInterface{
         if(isEmpty()){
             return null;
         }else{
-            return theQueue.get(0);
+            return mylist.get(1);
         }
     }
     
     public String displayQueue(){
          StringBuilder strB = new StringBuilder();
-        if(theQueue.isEmpty()){
-            strB.append("Empty stack");
+        if(mylist.isEmpty()){
+            strB.append("Empty queue");
         }else{
             //loop over and build uo string to return
-            for(int i = 0; i < theQueue.size(); i++){
-                strB.append(theQueue.get(i));
+            for(int i = 0; i < mylist.size(); i++){
+                strB.append(mylist.get(i));
                 strB.append("\n");
             }
         }

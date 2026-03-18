@@ -9,5 +9,37 @@ package dsa_ca;
  * @author apple
  */
 public class Plant {
+    private String plantName;
+    private int oxygenLevel;
+
+    public Plant() {
+    }
+
+    public Plant(String plantName, int oxygenLevel) {
+        this.plantName = plantName;
+        this.oxygenLevel = oxygenLevel;
+    }
+
+    public String getPlantName() {
+        return plantName;
+    }
+
+    public void setPlantName(String plantName) {
+        this.plantName = plantName;
+    }
+
+    public int getOxygenLevel() {
+        return oxygenLevel;
+    }
+
+    public void setOxygenLevel(int oxygenLevel) {
+        this.oxygenLevel = oxygenLevel;
+    }
+
+    @Override
+    public String toString() {
+        return "Plant{" + "plantName=" + plantName + ", oxygenLevel=" + oxygenLevel + '}';
+    }
+    
     
 }

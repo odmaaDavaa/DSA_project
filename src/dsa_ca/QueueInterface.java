@@ -9,5 +9,9 @@ package dsa_ca;
  * @author apple
  */
 public interface QueueInterface {
-    
+    public void enqueue(Object e);
+    public Object dequeue();
+    public Object frontOfQueue();
+    public int size();
+    public boolean isEmpty();
 }

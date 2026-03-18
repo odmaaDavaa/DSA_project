@@ -11,12 +11,17 @@ package dsa_ca;
 public class FishGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FishGUI.class.getName());
-
+    protected String species;
+    protected int population;
+    protected int count;
+    
+    MyStack stack = new MyStack();
     /**
      * Creates new form FishGUI
      */
     public FishGUI() {
         initComponents();
+        
     }
 
     /**
@@ -50,8 +55,18 @@ public class FishGUI extends javax.swing.JFrame {
         populationLBL.setText("Population:");
 
         addBTN.setText("ADD");
+        addBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBTNActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Number of Fish");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         firsBTN.setText("First Q:");
 
@@ -133,6 +148,25 @@ public class FishGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBTNActionPerformed
+        // TODO add your handling code here:
+        species = speciesTF.getText();
+        population = Integer.parseInt(populationTF.getText());
+        
+        Fish fish = new Fish();
+        stack.push(fish);
+        
+        count++;
+        
+        displayTA.setText("added succesfully");
+        
+    }//GEN-LAST:event_addBTNActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        displayTA.setText("Total population: " + stack.size());
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

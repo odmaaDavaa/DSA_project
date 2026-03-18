@@ -28,21 +28,104 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        titleLBL = new javax.swing.JLabel();
+        fishBTN = new javax.swing.JButton();
+        plantBTN = new javax.swing.JButton();
+        pollutionBTN = new javax.swing.JButton();
+        exitBTN = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        titleLBL.setText("RiverApp");
+
+        fishBTN.setText("Fish");
+        fishBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fishBTNActionPerformed(evt);
+            }
+        });
+
+        plantBTN.setText("Plant");
+        plantBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plantBTNActionPerformed(evt);
+            }
+        });
+
+        pollutionBTN.setText("Pollution");
+        pollutionBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pollutionBTNActionPerformed(evt);
+            }
+        });
+
+        exitBTN.setText("EXIT");
+        exitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(titleLBL))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(fishBTN)
+                        .addGap(34, 34, 34)
+                        .addComponent(plantBTN)
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(exitBTN)
+                            .addComponent(pollutionBTN))))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(titleLBL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fishBTN)
+                    .addComponent(plantBTN)
+                    .addComponent(pollutionBTN))
+                .addGap(58, 58, 58)
+                .addComponent(exitBTN)
+                .addGap(42, 42, 42))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fishBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishBTNActionPerformed
+        // TODO add your handling code here:
+        new FishGUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fishBTNActionPerformed
+
+    private void plantBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plantBTNActionPerformed
+        // TODO add your handling code here:
+        new PlantGUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_plantBTNActionPerformed
+
+    private void pollutionBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pollutionBTNActionPerformed
+        // TODO add your handling code here:
+        new PollutionGUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_pollutionBTNActionPerformed
+
+    private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_exitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +153,10 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exitBTN;
+    private javax.swing.JButton fishBTN;
+    private javax.swing.JButton plantBTN;
+    private javax.swing.JButton pollutionBTN;
+    private javax.swing.JLabel titleLBL;
     // End of variables declaration//GEN-END:variables
 }

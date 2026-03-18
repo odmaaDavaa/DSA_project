@@ -42,13 +42,10 @@ public class SLList implements LinkedListInterface{
             Node newNode = new Node(element, null);
             head = newNode;
         }else{
-            //move to the correct place given the index
-            // create an instance of node pointing to current
-            //reset the previous pointer
             setCurrent(index); // set the pointer for curr
             Node newNode = new Node(element,curr);
-            newNode.next= curr.next; //newNode needs to link to the one after curr 
-            curr.next = newNode; //reassign the next after curr to newNode
+            newNode.next= curr.next; 
+            curr.next = newNode; 
             
             //alternative to line 53 and 54
             //prev.setNext(newNode);       
